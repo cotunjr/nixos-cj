@@ -41,6 +41,7 @@
 	sd = "sudo shutdown now";
 	edit-home = "sudo nano /etc/nixos/home-manager/home.nix";
 	rb = "sudo reboot now";
+	edit-dot = "sudo nano /etc/nixos/home-manager/dot.nix";
     }; 
    ohMyZsh = {
 	enable = true;   

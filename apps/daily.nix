@@ -2,7 +2,13 @@
   {  environment.systemPackages = with pkgs; [
  	firefox
 	ungoogled-chromium
-	discord-canary
+	(discord-canary.override {
+	withVencord= true;
+	})
+        (discord.override {
+        # withOpenASAR = true; # can do this here too
+         withVencord = true;
+        })
 	anydesk
 	spotify
 	telegram-desktop
@@ -12,6 +18,7 @@
 	kdePackages.okular
 	prismlauncher
 	kdePackages.dolphin
+	vesktop
   ];
   programs.steam = {
 	enable = true;

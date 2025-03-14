@@ -12,4 +12,5 @@
 
   # Enable Home Manager itself
   programs.home-manager.enable = true;
+
 }

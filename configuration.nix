@@ -11,6 +11,7 @@
       ./apps/daily.nix
       ./zapret/zapret.nix
       ./cli-things/cli.nix
+      ./vm/qemu.nix	
     ];
 
  # Garbage Collector
@@ -22,13 +23,6 @@
       };
     nix.settings.auto-optimise-store = true;
 
-
-
-
-# boot.loader.efi.canTouchEfiVariables = true;
-# boot.loader.systemd-boot.enable = true;
-# bootloader.efi.efiSysMountPoint = "/boot/";
-
    boot.loader = {
   efi = {
 	canTouchEfiVariables = true;
@@ -39,28 +33,7 @@
    systemd-boot.configurationLimit = 2;
  };
 
- # Grub
-#   boot.loader = {
-#  efi = {
-#    canTouchEfiVariables = true;
-#    efiSysMountPoint = "/boot/"; # ← use the same mount point here.
-#  };
-#  grub = {
-#     efiSupport = true;
-#     #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
-#     device = "nodev";
-#     useOSProber = true;
-#  };
-#};
-
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
   networking.networkmanager.enable = true;
 
   # Set your time zone.

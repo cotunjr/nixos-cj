@@ -1,3 +1,4 @@
+
  { config, pkgs, ... }:
   {  environment.systemPackages = with pkgs; [
 	ungoogled-chromium
@@ -13,11 +14,15 @@
 	vesktop
 	gpu-screen-recorder-gtk
 	librewolf
+	protonup-qt
+	protonvpn-gui
+	tor-browser
   ];
   programs.steam = {
 	enable = true;
 	dedicatedServer.openFirewall = true;
 	localNetworkGameTransfers.openFirewall = true;
+	gamescopeSession.enable = true;
  };
  services.flatpak = {
 	enable = true;

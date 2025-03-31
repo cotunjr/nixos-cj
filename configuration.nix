@@ -35,7 +35,7 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
-
+  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
   # Set your time zone.
   time.timeZone = "Europe/Istanbul";
 
@@ -103,8 +103,8 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+   networking.firewall.allowedTCPPorts = [ 8096 ];
+   networking.firewall.allowedUDPPorts = [ 8096 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 

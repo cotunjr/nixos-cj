@@ -17,6 +17,12 @@
 	protonup-qt
 	protonvpn-gui
 	tor-browser
+	protonvpn-cli
+	qbittorrent-enhanced
+	firefox
+        piper
+	libratbag
+	rustdesk
   ];
   programs.steam = {
 	enable = true;
